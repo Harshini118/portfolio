@@ -16,10 +16,8 @@ body {
 }
 
 /* =========================
-   NAV BAR (CLEAN VERSION)
+   NAV BAR (FINAL CLEAN)
 ========================= */
-
-/* Remove bullets */
 nav ul {
   list-style: none;
   padding: 0;
@@ -27,46 +25,72 @@ nav ul {
   display: flex;
 }
 
-/* Each nav item */
 nav li {
   flex: 1;
 }
 
-/* Links */
+nav {
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 2em;
+}
+
+/* nav links */
 nav a {
   display: block;
   text-align: center;
   padding: 0.75em;
   text-decoration: none;
   color: inherit;
+  font-weight: 500;
 }
 
-/* Bottom line */
-nav {
-  border-bottom: 2px solid #ccc;
-  margin-bottom: 2em;
-}
-
-/* Accent color */
+/* accent */
 :root {
   --color-accent: oklch(65% 50% 0);
 }
 
-/* Current page highlight */
+/* current page */
 nav a.current {
   border-bottom: 4px solid #aaa;
 }
 
-/* Hover effect */
+/* hover */
 nav a:hover {
   border-bottom: 4px solid var(--color-accent);
 }
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1 {
+  font-size: 2.5em;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+main {
+  margin-top: 1em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* =========================
+   IMAGE (HOME PAGE FIX)
+========================= */
+img {
+  margin-top: 1em;
+  border-radius: 10px;
+  max-width: 100%;
 }
 
 /* =========================
    STEP 3: CONTACT FORM
 ========================= */
-
 input,
 textarea,
 button {
@@ -77,22 +101,34 @@ form {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1em;
+  max-width: 600px;
 }
 
 label {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
+  align-items: center;
 }
 
 button {
   grid-column: 1 / -1;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+/* nicer inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 0.4em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 /* =========================
    STEP 4: PROJECTS GRID
 ========================= */
-
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -111,12 +147,10 @@ button {
   transition: 0.2s;
 }
 
-/* Hover card effect */
 .projects article:hover {
   transform: translateY(-4px);
 }
 
-/* Images */
 .projects img {
   width: 100%;
   border-radius: 6px;
@@ -125,7 +159,6 @@ button {
 /* =========================
    STEP 5: RESUME STYLING
 ========================= */
-
 section {
   background: white;
   padding: 1em;
@@ -135,7 +168,7 @@ section {
 }
 
 section h2 {
-  border-bottom: 2px solid oklch(80% 3% 200);
+  border-bottom: 2px solid #ddd;
   padding-bottom: 0.3em;
 }
 
@@ -154,25 +187,4 @@ header p {
 time {
   color: gray;
   font-size: 0.9em;
-}
-
-/* =========================
-   TYPOGRAPHY POLISH
-========================= */
-
-h1 {
-  font-size: 3em;
-}
-
-h1, h2, h3 {
-  line-height: 1.1;
-  text-wrap: balance;
-}
-
-main {
-  margin-top: 1em;
-}
-
-p {
-  margin-bottom: 1em;
 }
