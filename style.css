@@ -16,34 +16,35 @@ body {
 }
 
 /* =========================
-   STEP 2: NAVIGATION
+   NAV BAR (CLEAN VERSION)
 ========================= */
 
-/* Remove list styling */
-nav ul,
-nav li {
-  display: contents;
+/* Remove bullets */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-/* Flexbox nav */
-nav {
-  display: flex;
-  margin-bottom: 2em;
-  border-bottom: 1px solid oklch(80% 3% 200);
-
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
+/* Each nav item */
+nav li {
+  flex: 1;
 }
 
 /* Links */
 nav a {
-  flex: 1;
+  display: block;
   text-align: center;
   padding: 0.75em;
   text-decoration: none;
   color: inherit;
-  transition: 0.2s;
+}
+
+/* Bottom line */
+nav {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 2em;
 }
 
 /* Accent color */
@@ -51,10 +52,15 @@ nav a {
   --color-accent: oklch(65% 50% 0);
 }
 
+/* Current page highlight */
+nav a.current {
+  border-bottom: 4px solid #aaa;
+}
+
 /* Hover effect */
 nav a:hover {
-  border-bottom: 0.3em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  border-bottom: 4px solid var(--color-accent);
+}
 }
 
 /* =========================
