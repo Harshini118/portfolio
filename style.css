@@ -1,6 +1,182 @@
+/* =========================
+   STEP 1: PAGE LAYOUT
+========================= */
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
   font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+  padding: 1em;
+
+  background-color: #f8f9fb;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   STEP 2: NAVIGATION
+========================= */
+
+/* Remove list styling */
+nav ul,
+nav li {
+  display: contents;
+}
+
+/* Flexbox layout */
+nav {
+  display: flex;
+  margin-bottom: 2em;
+  border-bottom: 1px solid oklch(80% 3% 200);
+
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Links */
+nav a {
+  flex: 1;
+  text-align: center;
+  padding: 0.75em;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+}
+
+/* Accent color */
+:root {
+  --color-accent: oklch(65% 50% 0);
+}
+
+/* Hover */
+nav a:hover {
+  border-bottom: 0.3em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+/* =========================
+   STEP 3: CONTACT FORM
+========================= */
+
+/* Typography */
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+/* Grid layout */
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+/* Align labels + inputs */
+label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+/* Button spans full width */
+button {
+  grid-column: 1 / -1;
+}
+
+/* =========================
+   STEP 4: PROJECTS GRID
+========================= */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+/* Align content using subgrid */
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+
+  background: white;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.projects article:hover {
+  transform: translateY(-4px);
+}
+
+/* Images */
+.projects img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* =========================
+   STEP 5: RESUME STYLING
+========================= */
+
+section {
+  background: white;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Section headers */
+section h2 {
+  border-bottom: 2px solid oklch(80% 3% 200);
+  padding-bottom: 0.3em;
+}
+
+/* Articles spacing */
+article {
+  margin-bottom: 1em;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.2em;
+}
+
+/* Header text */
+header p {
+  margin: 0.3em 0;
+}
+
+/* Dates */
+time {
+  color: gray;
+  font-size: 0.9em;
+}
+
+/* =========================
+   TYPOGRAPHY POLISH
+========================= */
+
+h1 {
+  font-size: 3em;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+main {
+  margin-top: 1em;
+}
+
+p {
+  margin-bottom: 1em;
 }
