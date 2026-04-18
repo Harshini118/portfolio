@@ -89,21 +89,25 @@ img {
 }
 
 /* =========================
-   STEP 3: CONTACT FORM
+   STEP 3: CONTACT FORM (FIXED + CLEAN)
 ========================= */
+
 input,
 textarea,
 button {
   font: inherit;
 }
 
+/* GRID LAYOUT */
 form {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1em;
-  max-width: 600px;
+  max-width: 700px;
+  margin-top: 1em;
 }
 
+/* LABEL = FULL ROW USING SUBGRID */
 label {
   display: grid;
   grid-template-columns: subgrid;
@@ -111,19 +115,36 @@ label {
   align-items: center;
 }
 
-button {
-  grid-column: 1 / -1;
-  padding: 0.5em;
-  cursor: pointer;
-}
-
-/* nicer inputs */
+/* INPUT + TEXTAREA STYLE */
 input,
 textarea {
   width: 100%;
-  padding: 0.4em;
+  padding: 0.5em;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* TEXTAREA HEIGHT */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* BUTTON FULL WIDTH */
+button {
+  grid-column: 1 / -1;
+  padding: 0.6em;
+  border: none;
+  border-radius: 6px;
+  background-color: #ddd;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* BUTTON HOVER */
+button:hover {
+  background-color: #ccc;
 }
 
 /* =========================
