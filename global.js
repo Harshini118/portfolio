@@ -77,16 +77,14 @@ document.body.insertAdjacentHTML(
 let select = document.querySelector("select");
 
 if ("colorScheme" in localStorage) {
-  document.documentElement.style.setProperty(
-    "color-scheme",
-    localStorage.colorScheme
-  );
+  document.documentElement.classList.add(localStorage.colorScheme);
   select.value = localStorage.colorScheme;
 }
 
 select.addEventListener("input", (event) => {
   let value = event.target.value;
 
-  document.documentElement.style.setProperty("color-scheme", value);
+  document.documentElement.classList.toggle("dark", value === "dark");
+  document.documentElement.classList.toggle("light", value === "light");
   localStorage.colorScheme = value;
 });
