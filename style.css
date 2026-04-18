@@ -1,31 +1,208 @@
 /* =========================
-   DARK MODE (FIXED)
+   BASE LAYOUT
 ========================= */
-
-/* DEFAULT (LIGHT) */
 body {
+  font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: auto;
+  padding: 1em;
+
   background-color: #f8f9fb;
   color: #222;
 }
 
-/* DARK MODE */
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   NAV BAR (JS GENERATED)
+========================= */
+nav {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 2em;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  padding: 0.75em;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+/* current page */
+nav a.current {
+  border-bottom: 4px solid #aaa;
+}
+
+/* hover */
+:root {
+  --color-accent: oklch(65% 50% 0);
+}
+
+nav a:hover {
+  border-bottom: 4px solid var(--color-accent);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1 {
+  font-size: 2.5em;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+main {
+  margin-top: 1em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* =========================
+   IMAGE
+========================= */
+img {
+  margin-top: 1em;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  max-width: 700px;
+}
+
+label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  grid-column: 1 / -1;
+  padding: 0.6em;
+  border: none;
+  border-radius: 6px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+/* =========================
+   PROJECTS GRID
+========================= */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+
+  background: white;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.projects img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* =========================
+   RESUME
+========================= */
+section {
+  background: white;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3em;
+}
+
+article {
+  margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+time {
+  color: gray;
+  font-size: 0.9em;
+}
+
+/* =========================
+   DARK MODE (FINAL FIX)
+========================= */
+
+/* enable system dark rendering */
+html.dark {
+  color-scheme: dark;
+}
+
+/* dark body */
 html.dark body {
   background-color: #121212;
   color: #f5f5f5;
 }
 
-/* cards */
+/* dark cards */
 html.dark section,
 html.dark .projects article {
   background: #1e1e1e;
 }
 
-/* nav */
+/* dark nav */
 html.dark nav {
   border-bottom: 2px solid #444;
 }
 
-/* button */
+/* dark button */
 html.dark button {
   background-color: #333;
   color: white;
