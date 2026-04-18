@@ -209,3 +209,53 @@ time {
   color: gray;
   font-size: 0.9em;
 }
+
+/* =========================
+   DARK MODE FIX
+========================= */
+
+html {
+  color-scheme: light dark;
+}
+
+/* LIGHT (default) */
+:root {
+  --bg: #f8f9fb;
+  --text: #222;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #f5f5f5;
+  }
+}
+
+/* APPLY COLORS */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* OPTIONAL: cards in dark mode */
+section,
+.projects article {
+  background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  section,
+  .projects article {
+    background: #1e1e1e;
+  }
+
+
+  nav {
+  border-bottom: 2px solid var(--text);
+}
+
+nav a {
+  color: inherit;
+}
+}
