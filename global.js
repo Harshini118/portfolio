@@ -6,58 +6,22 @@ function $$(selector, context = document) {
 }
 
 /* =========================
-   STEP 3: AUTO NAV MENU
+   STEP 2: AUTO CURRENT PAGE
 ========================= */
 
-// pages list
-let pages = [
-  { url: "", title: "Home" },
-  { url: "projects/", title: "Projects" },
-  { url: "contact/", title: "Contact" },
-  { url: "resume/", title: "Resume" },
-  { url: "https://github.com/Harshini118", title: "GitHub" }
-];
+let navLinks = $$("nav a");
 
-// base path (VERY IMPORTANT)
-const BASE_PATH =
-  location.hostname === "localhost" || location.hostname === "127.0.0.1"
-    ? "/"
-    : "/portfolio/"; 
-
-// create nav
-let nav = document.createElement("nav");
-document.body.prepend(nav);
-
-// create links
-for (let p of pages) {
-  let url = p.url;
-  let title = p.title;
-
-  // fix relative paths
-  url = !url.startsWith("http") ? BASE_PATH + url : url;
-
-  // create link
-  let a = document.createElement("a");
-  a.href = url;
-  a.textContent = title;
-
-  // highlight current page
- a.classList.toggle(
-  "current",
-  a.pathname === location.pathname ||
-  (a.pathname.endsWith("/") && location.pathname === BASE_PATH)
+let currentLink = navLinks.find(
+  (a) =>
+    a.host === location.host &&
+    a.pathname === location.pathname
 );
 
-  // open external links in new tab
-  if (a.host !== location.host) {
-    a.target = "_blank";
-  }
-
-  nav.append(a);
-}
+// safe add
+currentLink?.classList.add("current");
 
 /* =========================
-   DARK MODE (KEEP THIS)
+   DARK MODE
 ========================= */
 
 document.body.insertAdjacentHTML(
@@ -76,15 +40,23 @@ document.body.insertAdjacentHTML(
 
 let select = document.querySelector("select");
 
+// load saved theme
 if ("colorScheme" in localStorage) {
   document.documentElement.classList.add(localStorage.colorScheme);
   select.value = localStorage.colorScheme;
 }
 
+// change theme
 select.addEventListener("input", (event) => {
   let value = event.target.value;
 
-  document.documentElement.classList.toggle("dark", value === "dark");
-  document.documentElement.classList.toggle("light", value === "light");
+  document.documentElement.classList.remove("light", "dark");
+
+  if (value === "dark") {
+    document.documentElement.classList.add("dark");
+  } else if (value === "light") {
+    document.documentElement.classList.add("light");
+  }
+
   localStorage.colorScheme = value;
 });
