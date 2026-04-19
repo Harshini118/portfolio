@@ -356,3 +356,84 @@ li {
 .skills-list li {
   margin-bottom: 0.4em;
 }
+
+/* =========================
+   PROFESSIONAL RESUME UPGRADE
+========================= */
+
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* section spacing */
+.resume-section {
+  margin-top: 3em;
+}
+
+/* section titles */
+.resume-section h2 {
+  font-size: 1.3em;
+  font-weight: 600;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.4em;
+  margin-bottom: 1.5em;
+}
+
+/* each item */
+.resume-item {
+  margin-bottom: 2em;
+}
+
+/* header row (title + date aligned) */
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+}
+
+/* job / school title */
+.resume-header h3 {
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+/* dates */
+.resume-date {
+  color: #aaa;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+/* description text */
+.resume-item p {
+  margin-top: 0.3em;
+  color: #ccc;
+}
+
+/* bullets */
+.resume-item ul {
+  margin-top: 0.5em;
+  padding-left: 1.2em;
+}
+
+.resume-item li {
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+
+/* skills */
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  margin-bottom: 0.5em;
+}
+
+/* name header spacing */
+.resume-header-top {
+  margin-bottom: 2.5em;
+}
