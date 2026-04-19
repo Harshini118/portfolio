@@ -20,17 +20,19 @@ let currentLink = navLinks.find(
 // safe add
 currentLink?.classList.add("current");
 
+
 /* =========================
-   DARK MODE
+   DARK MODE (FIXED)
 ========================= */
 
+// add dropdown
 document.body.insertAdjacentHTML(
   "afterbegin",
   `
   <label class="color-scheme">
     Theme:
     <select>
-      <option value="light dark">Auto</option>
+      <option value="auto">Auto</option>
       <option value="light">Light</option>
       <option value="dark">Dark</option>
     </select>
@@ -38,25 +40,23 @@ document.body.insertAdjacentHTML(
 `
 );
 
-let select = document.querySelector("select");
+let select = document.querySelector(".color-scheme select");
 
 // load saved theme
-if ("colorScheme" in localStorage) {
-  document.documentElement.classList.add(localStorage.colorScheme);
-  select.value = localStorage.colorScheme;
+if (localStorage.theme) {
+  document.documentElement.className = localStorage.theme;
+  select.value = localStorage.theme;
 }
 
 // change theme
 select.addEventListener("input", (event) => {
   let value = event.target.value;
 
-  document.documentElement.classList.remove("light", "dark");
-
-  if (value === "dark") {
-    document.documentElement.classList.add("dark");
-  } else if (value === "light") {
-    document.documentElement.classList.add("light");
+  if (value === "auto") {
+    document.documentElement.className = "";
+  } else {
+    document.documentElement.className = value;
   }
 
-  localStorage.colorScheme = value;
+  localStorage.theme = value;
 });
