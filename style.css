@@ -16,10 +16,11 @@ body {
    NAV (FIXED)
 ========================= */
 nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
   list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex;
 }
 
 nav li {
@@ -88,21 +89,31 @@ button {
 }
 
 .projects article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
+  background: white;
+  padding: 1.2em;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.projects article:hover {
+  transform: translateY(-6px);
 }
 
 /* =========================
    RESUME
 ========================= */
 section {
-  margin-bottom: 2em;
+  background: white;
+  padding: 1.5em;
+  border-radius: 12px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
 section h2 {
-  border-bottom: 2px solid var(--border-color);
-  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  border-bottom: 1px solid #ddd;
 }
 
 article {
@@ -211,4 +222,35 @@ html.dark section {
 
 html.dark img {
   filter: brightness(0.9);
+}
+
+/* =========================
+   HERO SECTION (PORTFOLIO LOOK)
+========================= */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  margin-top: 2em;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.profile-pic {
+  width: 300px;
+  border-radius: 12px;
+}
+
+.subtext {
+  color: gray;
+}
+
+/* mobile fix */
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
 }
