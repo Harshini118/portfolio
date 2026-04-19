@@ -53,6 +53,9 @@ nav a:hover {
   border-bottom: 0.3em solid var(--color-accent);
 }
 
+
+
+
 /* =========================
    FORM
 ========================= */
@@ -101,37 +104,72 @@ button {
 }
 
 /* =========================
-   RESUME
+   RESUME PROFESSIONAL STYLE
 ========================= */
-section {
+
+.resume {
+  max-width: 800px;
+  margin: 2em auto;
+}
+
+/* top header */
+.resume-header-top {
+  margin-bottom: 2em;
+}
+
+.resume-header-top h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.2em;
+}
+
+.resume-header-top p {
+  margin: 0.2em 0;
+}
+
+/* sections */
+.resume-section {
   background: white;
   padding: 1.5em;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-bottom: 1.5em;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-section h2 {
-  margin-bottom: 0.8em;
+.resume-section h2 {
   border-bottom: 1px solid #ddd;
-}
-
-article {
+  padding-bottom: 0.3em;
   margin-bottom: 1em;
 }
 
-ul {
+/* items */
+.resume-item {
+  margin-bottom: 1.2em;
+}
+
+/* align title + date */
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.resume-date {
+  color: #777;
+  font-size: 0.9em;
+}
+
+/* bullets */
+.resume-item ul {
+  margin-top: 0.5em;
   padding-left: 1.2em;
 }
 
-header p {
-  margin: 0.3em 0;
+/* skills */
+.skills-list li {
+  margin-bottom: 0.4em;
 }
 
-time {
-  color: gray;
-  font-size: 0.9em;
-}
+
 
 /* =========================
    DARK MODE
