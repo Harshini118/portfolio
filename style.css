@@ -254,3 +254,67 @@ html.dark img {
     text-align: center;
   }
 }
+/* =========================
+   RESUME — CLEAN PROFESSIONAL LOOK
+========================= */
+
+/* make resume narrower + centered */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* section cards */
+section {
+  background: white;
+  padding: 1.5em;
+  border-radius: 12px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* section titles */
+section h2 {
+  font-size: 1.4em;
+  margin-bottom: 0.8em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3em;
+}
+
+/* spacing between entries */
+article {
+  margin-bottom: 1.5em;
+}
+
+/* HEADER ROW (title + date aligned) */
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* job/school name */
+.resume-header h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* dates on right */
+.resume-date {
+  color: gray;
+  font-size: 0.9em;
+}
+
+/* bullets cleaner */
+ul {
+  margin-top: 0.5em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
+
+/* skills inline look */
+.skills-list li {
+  margin-bottom: 0.4em;
+}
