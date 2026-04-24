@@ -1,1 +1,74 @@
-
+[
+  {
+    "title": "Personal Portfolio Website",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A multi-page personal portfolio website built with HTML, CSS, and JavaScript."
+  },
+  {
+    "title": "Lab 1 Portfolio Setup",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Initial setup for my personal website with navigation and basic page structure."
+  },
+  {
+    "title": "Lab 2 CSS Styling",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Styled the portfolio using CSS layout, spacing, typography, and responsive design."
+  },
+  {
+    "title": "Lab 3 JavaScript I",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Added JavaScript features like current page highlighting and theme switching."
+  },
+  {
+    "title": "Lab 4 JavaScript II",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Used JSON data, reusable functions, and the GitHub API to make the website dynamic."
+  },
+  {
+    "title": "Data Science Class Project",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A project focused on analyzing data and communicating results clearly."
+  },
+  {
+    "title": "Machine Learning Exploration",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Explored machine learning concepts through small examples and experiments."
+  },
+  {
+    "title": "Data Visualization Practice",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Created visualizations to better understand patterns and trends in data."
+  },
+  {
+    "title": "Resume Page Design",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Designed a clean resume page with sections for education, experience, and skills."
+  },
+  {
+    "title": "Contact Page",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Built a contact page with a form and simple layout."
+  },
+  {
+    "title": "GitHub Practice",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Practiced using GitHub to manage files, commits, and project changes."
+  },
+  {
+    "title": "Future Project",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Placeholder project for future DSC 106 work."
+  }
+]
