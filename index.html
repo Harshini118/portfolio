@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshini Kanakala: Personal Site and Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshini Kanakala: Personal Site and Portfolio</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ✅ NAV BAR -->
 <header>
   <nav>
     <ul>
@@ -24,21 +22,29 @@
   </nav>
 </header>
 
-<!-- MAIN CONTENT -->
 <main>
-    <h1>Harshini Kanakala</h1>
+  <h1>Harshini Kanakala</h1>
 
-    <p>
-        Hello! I’m Harshini, a Data Science student at UC San Diego interested in 
-        data engineering and machine learning. Outside of tech, I love camping, 
-        hiking, exploring new places, and cooking.
-    </p>
+  <p>
+    Hello! I’m Harshini, a Data Science student at UC San Diego interested in 
+    data engineering and machine learning. Outside of tech, I love camping, 
+    hiking, exploring new places, and cooking.
+  </p>
 
-    <img src="images/IMG_3193.jpeg" alt="Harshini's photo" class="profile-pic">
+  <img src="images/IMG_3193.jpeg" alt="Harshini's photo" class="profile-pic">
+
+  <!-- NEW SECTION -->
+  <h2>Latest Projects</h2>
+  <div class="projects"></div>
+
+  <!-- NEW SECTION -->
+  <h2>My GitHub Stats</h2>
+  <div id="profile-stats"></div>
+
 </main>
 
-<!-- ✅ JS (REQUIRED) -->
 <script type="module" src="global.js"></script>
+<script type="module" src="index.js" defer></script>
 
 </body>
 </html>
