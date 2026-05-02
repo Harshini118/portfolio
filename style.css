@@ -43,6 +43,7 @@ nav a {
 
 :root {
   --color-accent: oklch(65% 50% 0);
+  --border-color: oklch(50% 10% 200 / 40%);
 }
 
 nav a.current {
@@ -101,6 +102,72 @@ button {
 
 .projects article:hover {
   transform: translateY(-6px);
+}
+
+.projects article img {
+  max-width: 100%;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-block: 2em;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  overflow: visible;
+}
+
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.legend {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  margin: 0;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  list-style: none;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color);
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
+.searchBar {
+  width: 100%;
+  margin-block: 1em;
+  padding: 0.7em;
 }
 
 /* =========================
