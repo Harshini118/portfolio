@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta | Harshini Kanakala</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../projects/index.html">Projects</a></li>
+      <li><a href="../contact/index.html">Contact</a></li>
+      <li><a href="../resume/index.html">Resume</a></li>
+      <li><a href="../meta/index.html">Meta</a></li>
+      <li><a href="https://github.com/Harshini118" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="meta-page">
+  <h1>Codebase Meta Analysis</h1>
+  <p>
+    This page visualizes metadata from my portfolio codebase, including summary
+    statistics and when each commit's current lines of code were last edited.
+  </p>
+
+  <section>
+    <h2>Summary Stats</h2>
+    <div id="stats"></div>
+  </section>
+
+  <section>
+    <h2>Commits by Time of Day</h2>
+    <p id="selection-count">No commits selected</p>
+    <div id="chart"></div>
+    <dl id="language-breakdown" class="stats"></dl>
+  </section>
+
+  <dl id="commit-tooltip" class="info tooltip" hidden>
+    <dt>Commit</dt>
+    <dd><a href="" id="commit-link" target="_blank"></a></dd>
+
+    <dt>Date</dt>
+    <dd id="commit-date"></dd>
+
+    <dt>Time</dt>
+    <dd id="commit-time"></dd>
+
+    <dt>Author</dt>
+    <dd id="commit-author"></dd>
+
+    <dt>Lines</dt>
+    <dd id="commit-lines"></dd>
+  </dl>
+</main>
+
+<script type="module" src="../global.js"></script>
+<script type="module" src="main.js"></script>
+</body>
+</html>

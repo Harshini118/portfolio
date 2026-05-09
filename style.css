@@ -325,6 +325,118 @@ html.dark section {
   background-color: transparent;
 }
 
+/* =========================
+   META ANALYSIS
+========================= */
+.meta-page section {
+  margin-block: 2em;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  gap: 1em;
+  margin-block: 1em;
+}
+
+.stats dt {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.stats dd {
+  margin: 0;
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+#chart {
+  max-width: 100%;
+  margin-block: 2em;
+}
+
+#chart svg {
+  width: 100%;
+  height: auto;
+}
+
+.gridlines line {
+  stroke: #ddd;
+  stroke-opacity: 0.7;
+}
+
+.gridlines path {
+  display: none;
+}
+
+#chart circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#chart circle:hover {
+  transform: scale(1.5);
+}
+
+#chart circle.selected {
+  fill: #ff6b6b;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35em 0.75em;
+  margin: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  color: #666;
+  font-weight: 700;
+}
+
+dl.info dd {
+  margin: 0;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 10;
+  max-width: 22em;
+  padding: 0.9em;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: color-mix(in oklch, canvas 88%, transparent);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#selection-count {
+  font-weight: 700;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
 html.dark img {
   filter: brightness(0.9);
 }
