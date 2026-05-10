@@ -1,74 +1,37 @@
 [
   {
+    "title": "UCSD Capital Project Forecasting",
+    "year": "2026",
+    "url": "https://github.com/Harshini118/i4x-CPM",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A collaborative data science project with UC San Diego Capital Project Management exploring predictive cost and schedule modeling for campus construction projects using historical monthly spending data."
+  },
+  {
+    "title": "Persuasive or Deceptive Visualization",
+    "year": "2026",
+    "url": "https://github.com/Harshini118/project2",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A DSC 106 visualization project using World Bank gender education indicators to create and critique persuasive and deceptive visualizations about gender equality in education."
+  },
+  {
     "title": "Personal Portfolio Website",
     "year": "2026",
+    "url": "https://github.com/Harshini118/portfolio",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "A multi-page personal portfolio website built with HTML, CSS, and JavaScript."
+    "description": "A multi-page personal portfolio built with HTML, CSS, JavaScript, and D3, including dynamic project rendering, GitHub stats, interactive project filtering, and a codebase meta-analysis page."
   },
   {
-    "title": "Lab 1 Portfolio Setup",
-    "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Initial setup for my personal website with navigation and basic page structure."
-  },
-  {
-    "title": "Lab 2 CSS Styling",
-    "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Styled the portfolio using CSS layout, spacing, typography, and responsive design."
-  },
-  {
-    "title": "Lab 3 JavaScript I",
-    "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Added JavaScript features like current page highlighting and theme switching."
-  },
-  {
-    "title": "Lab 4 JavaScript II",
-    "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Used JSON data, reusable functions, and the GitHub API to make the website dynamic."
-  },
-  {
-    "title": "Data Science Class Project",
+    "title": "Buzz or Bust",
     "year": "2025",
+    "url": "https://github.com/Harshini118/buzz-or-bust",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "A project focused on analyzing data and communicating results clearly."
+    "description": "An interactive Flask web app and datathon project where users guess which of two songs is more popular, with a separate dashboard for visualizing music popularity trends."
   },
   {
-    "title": "Machine Learning Exploration",
+    "title": "CycleGAN DS3 Implementation",
     "year": "2025",
+    "url": "https://github.com/Harshini118/cyclegan-ds3",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Explored machine learning concepts through small examples and experiments."
-  },
-  {
-    "title": "Data Visualization Practice",
-    "year": "2025",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Created visualizations to better understand patterns and trends in data."
-  },
-  {
-    "title": "Resume Page Design",
-    "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Designed a clean resume page with sections for education, experience, and skills."
-  },
-  {
-    "title": "Contact Page",
-    "year": "2026",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Built a contact page with a form and simple layout."
-  },
-  {
-    "title": "GitHub Practice",
-    "year": "2025",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Practiced using GitHub to manage files, commits, and project changes."
-  },
-  {
-    "title": "Future Project",
-    "year": "2024",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder project for future DSC 106 work."
+    "description": "A DS3 project implementing core CycleGAN components in Python, including generator, discriminator, dataloader, loss functions, and training entry points based on the CycleGAN paper."
   }
 ]
