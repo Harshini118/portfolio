@@ -9,7 +9,7 @@
   {
     "title": "Recipe Ratings Analysis",
     "year": "2026",
-    "url": "https://github.com/jiyasreejesh/dsc80-recipe-analysis",
+    "url": "https://github.com/Harshini118/dsc80-recipe-analysis",
     "demo": "https://jiyasreejesh.github.io/dsc80-recipe-analysis/",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
     "description": "A DSC 80 data science project analyzing 83,782 Food.com recipes and 731,927 user interactions to study whether recipe complexity affects ratings, including missingness assessment, hypothesis testing, regression modeling, and fairness analysis."
