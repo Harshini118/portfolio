@@ -1,5 +1,18 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
+const configuredMapboxToken =
+  new URLSearchParams(window.location.search).get('mapboxToken') ||
+  localStorage.getItem('mapboxToken') ||
+  '';
+const useMapbox = configuredMapboxToken.startsWith('pk.');
+const { default: mapboxgl } = useMapbox
+  ? await import('https://cdn.jsdelivr.net/npm/mapbox-gl@2.15.0/+esm')
+  : await import('https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/+esm');
+
+if (useMapbox) {
+  mapboxgl.accessToken = configuredMapboxToken;
+}
+
 const BOSTON_BIKE_LANES_URL =
   'https://bostonopendata-boston.opendata.arcgis.com/datasets/boston::existing-bike-network-2022.geojson';
 const CAMBRIDGE_BIKE_LANES_URL =
@@ -39,7 +52,7 @@ const cartoStyle = {
 
 const map = new mapboxgl.Map({
   container: 'map',
-  style: cartoStyle,
+  style: useMapbox ? 'mapbox://styles/mapbox/streets-v12' : cartoStyle,
   center: [-71.09415, 42.36027],
   zoom: 12,
   minZoom: 10,
