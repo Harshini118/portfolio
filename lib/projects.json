@@ -1,5 +1,13 @@
 [
   {
+    "title": "Bikewatching",
+    "year": "2026",
+    "url": "https://github.com/Harshini118/portfolio/tree/main/bikewatching",
+    "demo": "https://harshini118.github.io/portfolio/bikewatching/",
+    "image": "https://harshini118.github.io/portfolio/bikewatching/assets/bikewatching-thumbnail.svg",
+    "description": "A DSC 106 geospatial visualization of Boston-area Bluebike activity using Mapbox GL JS, D3, bike lane GeoJSON layers, station traffic bubbles, hover counts, a time-of-day filter, and departure-versus-arrival color encoding."
+  },
+  {
     "title": "UCSD Capital Project Forecasting",
     "year": "2026",
     "url": "https://github.com/Harshini118/i4x-CPM",

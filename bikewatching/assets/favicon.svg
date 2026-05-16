@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bikewatching favicon">
+  <rect width="64" height="64" rx="14" fill="#f4f7f3"/>
+  <circle cx="19" cy="43" r="10" fill="none" stroke="#186a6b" stroke-width="5"/>
+  <circle cx="46" cy="43" r="10" fill="none" stroke="#186a6b" stroke-width="5"/>
+  <path d="M19 43 28 25h9l9 18M28 25l-4-7m4 7 8 18" fill="none" stroke="#d96f2a" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <path d="M35 18h9" stroke="#2466d8" stroke-linecap="round" stroke-width="5"/>
+</svg>

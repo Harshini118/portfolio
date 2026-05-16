@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bikewatching | Harshini Kanakala</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.13.3/mapbox-gl.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Portfolio navigation">
+      <a href="../index.html">Home</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../resume/index.html">Resume</a>
+      <a href="../meta/index.html">Meta</a>
+      <a href="https://github.com/Harshini118/portfolio" target="_blank">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <p class="eyebrow">DSC 106 Lab 7</p>
+        <h1>Bikewatching</h1>
+        <p>
+          An interactive geospatial view of Boston-area Bluebike stations, bike lanes,
+          and March 2024 trip activity.
+        </p>
+      </div>
+      <div class="summary-grid" aria-label="Visualization encodings">
+        <p><strong>Circle size</strong><span>Total station traffic</span></p>
+        <p><strong>Circle color</strong><span>Departures vs. arrivals</span></p>
+        <p><strong>Slider</strong><span>Trips within one hour</span></p>
+      </div>
+    </section>
+
+    <section class="map-panel" aria-label="Bluebike station map">
+      <div class="map-toolbar">
+        <label for="time-slider">
+          <span>Time of day</span>
+          <input id="time-slider" type="range" min="-1" max="1439" value="-1">
+        </label>
+        <div class="time-readout">
+          <time id="selected-time">Any time</time>
+          <span id="any-time">Showing all March trips</span>
+        </div>
+      </div>
+
+      <div id="map" aria-label="Map of Boston and Cambridge Bluebike stations"></div>
+
+      <div class="legend" aria-label="Station flow color legend">
+        <div class="legend-item" style="--departure-ratio: 0">
+          <span></span>
+          <p><strong>More arrivals</strong><small>Orange</small></p>
+        </div>
+        <div class="legend-item" style="--departure-ratio: 0.5">
+          <span></span>
+          <p><strong>Balanced</strong><small>Neutral</small></p>
+        </div>
+        <div class="legend-item" style="--departure-ratio: 1">
+          <span></span>
+          <p><strong>More departures</strong><small>Blue</small></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.13.3/mapbox-gl.js"></script>
+  <script type="module" src="map.js"></script>
+</body>
+</html>
