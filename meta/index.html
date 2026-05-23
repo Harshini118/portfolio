@@ -28,16 +28,39 @@
     statistics and when each commit's current lines of code were last edited.
   </p>
 
+  <section class="meta-controls">
+    <h2>Code Evolution</h2>
+    <label class="commit-progress-control" for="commit-progress">
+      <span>Show commits until:</span>
+      <input id="commit-progress" type="range" min="0" max="100" value="100">
+      <time id="commit-time"></time>
+    </label>
+  </section>
+
   <section>
     <h2>Summary Stats</h2>
     <div id="stats"></div>
   </section>
 
-  <section>
+  <section class="commit-story-section">
     <h2>Commits by Time of Day</h2>
-    <p id="selection-count">No commits selected</p>
-    <div id="chart"></div>
-    <dl id="language-breakdown" class="stats"></dl>
+    <div id="scrolly-1">
+      <div id="scatter-story" aria-label="Commit narrative"></div>
+      <div id="scatter-plot">
+        <p id="selection-count">No commits selected</p>
+        <div id="chart"></div>
+        <dl id="language-breakdown" class="stats"></dl>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>File Sizes by Technology</h2>
+    <p>
+      Each dot represents one current line of code. Files are sorted by size and
+      colored by file type.
+    </p>
+    <dl id="files"></dl>
   </section>
 
   <dl id="commit-tooltip" class="info tooltip" hidden>
@@ -45,16 +68,16 @@
     <dd><a href="" id="commit-link" target="_blank"></a></dd>
 
     <dt>Date</dt>
-    <dd id="commit-date"></dd>
+    <dd id="tooltip-commit-date"></dd>
 
     <dt>Time</dt>
-    <dd id="commit-time"></dd>
+    <dd id="tooltip-commit-time"></dd>
 
     <dt>Author</dt>
-    <dd id="commit-author"></dd>
+    <dd id="tooltip-commit-author"></dd>
 
     <dt>Lines</dt>
-    <dd id="commit-lines"></dd>
+    <dd id="tooltip-commit-lines"></dd>
   </dl>
 </main>
 
